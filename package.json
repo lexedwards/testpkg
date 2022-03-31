@@ -1,0 +1,39 @@
+{
+  "name": "@lexedwards/testpkg",
+  "private": false,
+  "version": "1.0.0",
+  "description": "A Simple test package",
+  "source": "src/index.ts",
+  "main": "dist/index.js",
+  "types": "dist/types.d.ts",
+  "scripts": {
+    "watch": "parcel watch",
+    "build": "parcel build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "files": [
+    "./package.json",
+    "./README.md",
+    "./CHANGELOG.md",
+    "./bin",
+    "./dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/lexedwards/testpkg.git"
+  },
+  "keywords": [
+    "test"
+  ],
+  "author": "@lexedwards",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lexedwards/testpkg/issues"
+  },
+  "homepage": "https://github.com/lexedwards/testpkg#readme",
+  "devDependencies": {
+    "jest": "^27.5.1",
+    "parcel": "^2.4.1",
+    "typescript": "^4.6.3"
+  }
+}
