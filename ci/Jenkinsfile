@@ -15,7 +15,7 @@ pipeline {
                 sh "node --version"
                 sh "npm --version"
                 sh "git --version"
-                env.COMMIT_MESSAGE=sh "git log -1 --pretty=%B"
+                env.COMMIT_MESSAGE = sh (script: "git log -1 --pretty=%B",,returnStdout: true).trim()
             }
         }
     }
