@@ -18,5 +18,10 @@ pipeline {
                 sh "git --version"
             }
         }
+        stage("Lint commit") {
+            steps {
+                sh "npx @lexedwards lint $COMMIT_MESSAGE"
+            }
+        }
     }
 }
