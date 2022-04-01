@@ -3,6 +3,7 @@ pipeline {
     environment {
         OWNER="lexedwards"
         REPO="testpkg"
+        COMMIT_MESSAGE = sh(script: "git log -1 --pretty=%B",,returnStdout: true).trim()
     }
     stages {
         stage("Variables") {
@@ -15,7 +16,6 @@ pipeline {
                 sh "node --version"
                 sh "npm --version"
                 sh "git --version"
-                env.COMMIT_MESSAGE = sh (script: "git log -1 --pretty=%B",,returnStdout: true).trim()
             }
         }
     }
