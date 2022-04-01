@@ -20,7 +20,7 @@ pipeline {
         }
         stage("Lint commit") {
             steps {
-                sh "npx @lexedwards lint $COMMIT_MESSAGE"
+                sh "npx @lexedwards/release-cli lint $COMMIT_MESSAGE"
             }
         }
     }
