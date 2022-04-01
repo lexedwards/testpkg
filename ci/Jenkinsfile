@@ -1,0 +1,17 @@
+pipeline {
+    agent any
+    stages {
+        stage("Variables") {
+            steps {
+                sh "printenv"
+            }
+        }
+        stage("Version Check") {
+            steps {
+                sh "node --version"
+                sh "npm --version"
+                sh "git --version"
+            }
+        }
+    }
+}
