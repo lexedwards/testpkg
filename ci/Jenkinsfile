@@ -1,5 +1,9 @@
 pipeline {
     agent any
+    environment {
+        OWNER: "lexedwards"
+        REPO: "testpkg"
+    }
     stages {
         stage("Variables") {
             steps {
