@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage("Variables") {
             steps {
-                sh "printenv"
+                echo "env:  ${env.getEnvironment()}"
             }
         }
         stage("Version Check") {
