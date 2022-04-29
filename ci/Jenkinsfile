@@ -23,5 +23,14 @@ pipeline {
                 sh "npx @lexedwards/release-cli lint '$COMMIT_MESSAGE'"
             }
         }
+        stage('Publish') {
+            environment {
+                NPM_TOKEN=credentials('NPM_TOKEN')
+                GITHUB_TOKEN=credentials('GITHUB_TOKEN')
+            }
+            steps {
+
+            }
+        }
     }
 }
