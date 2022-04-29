@@ -1,7 +1,7 @@
 {
   "name": "@lexedwards/testpkg",
   "private": false,
-  "version": "1.1.40",
+  "version": "1.1.41",
   "description": "A Simple test package",
   "source": "src/index.ts",
   "main": "dist/index.js",
