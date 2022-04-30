@@ -1,10 +1,5 @@
 pipeline {
     agent any
-    environment {
-        OWNER="lexedwards"
-        REPO="testpkg"
-        COMMIT_MESSAGE = sh(script: "git log -1 --pretty=%B",,returnStdout: true).trim()
-    }
     stages {
         stage("Variables") {
             steps {
@@ -20,10 +15,15 @@ pipeline {
         }
         stage("Lint commit") {
             steps {
-                sh "npx @lexedwards/release-cli lint '$COMMIT_MESSAGE'"
+                sh "npx @lexedwards/release-cli lint"
             }
         }
         stage('Publish') {
+            when {
+                not {
+                    tag 'v*'
+                }
+            }
             environment {
                 NPM_TOKEN=credentials('NPM_TOKEN')
                 GITHUB_TOKEN=credentials('GITHUB_TOKEN')
