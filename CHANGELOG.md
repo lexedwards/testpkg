@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0](https://github.com/lexedwards/testpkg/compare/v1.1.63...v2.0.0) (2022-04-30)
+
+
+### ⚠ BREAKING CHANGES
+
+* **ci:** describe breaking change
+
+fix JIRA-1234
+
+### Features
+
+* **ci:** something title ([#6](https://github.com/lexedwards/testpkg/issues/6)) ([3c21cf9](https://github.com/lexedwards/testpkg/commit/3c21cf977e684a264fd787972629f97e25726572))
+
 ### [1.1.63](https://github.com/lexedwards/testpkg/compare/v1.1.62...v1.1.63) (2022-04-30)
 
 ### [1.1.62](https://github.com/lexedwards/testpkg/compare/v1.1.61...v1.1.62) (2022-04-30)
