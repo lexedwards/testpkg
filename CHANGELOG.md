@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.1.5](https://github.com/lexedwards/testpkg/compare/v3.0.4...v3.1.5) (2022-05-13)
+
+
+### Other Changes
+
+* manual bump package ([621eeb6](https://github.com/lexedwards/testpkg/commit/621eeb682da30256b468dbab798dc2172f301538))
+* manual bump package ([1c7b198](https://github.com/lexedwards/testpkg/commit/1c7b1987791d0908ef36fa29389c34bfd2efcfaa))
+* manual bump package ([564a203](https://github.com/lexedwards/testpkg/commit/564a2039dc3055f60027b944fbe9d35b0ed9901d))
+
 ### [3.0.4](https://github.com/lexedwards/testpkg/compare/v3.0.3...v3.0.4) (2022-05-13)
 
 ### [3.0.3](https://github.com/lexedwards/testpkg/compare/v2.1.1...v3.0.3) (2022-05-13)
