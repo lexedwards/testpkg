@@ -18,6 +18,11 @@ pipeline {
                 sh "npx @lexedwards/release-cli lint"
             }
         }
+        stage("npm install") {
+            steps {
+                sh "npm ci"
+            }
+        }
         stage('Publish') {
             when {
                 not {
