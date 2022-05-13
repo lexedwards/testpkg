@@ -34,7 +34,7 @@ pipeline {
                 GITHUB_TOKEN=credentials('GITHUB_TOKEN')
             }
             steps {
-                sh "CI= npx @lexedwards/release-cli@latest release --github --npm"
+                sh "npm run release"
             }
         }
     }

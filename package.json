@@ -10,7 +10,8 @@
     "watch": "parcel watch",
     "build": "parcel build",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "release": "npx @lexedwards/release-cli@latest release --github --npm"
   },
   "files": [
     "./package.json",
