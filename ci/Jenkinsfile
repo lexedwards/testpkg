@@ -4,6 +4,7 @@ pipeline {
         stage("Variables") {
             steps {
                 sh "printenv"
+                CURRENT_TAG = sh (script: "git name-rev --tags --name-only $(git rev-parse HEAD)", returnStdout: true).trim()
             }
         }
         stage("Version Check") {
@@ -32,7 +33,7 @@ pipeline {
         stage('Publish') {
             when {
                 not {
-                    tag 'v*'
+                    CURRENT_TAG "v*"
                 }
             }
             environment {
