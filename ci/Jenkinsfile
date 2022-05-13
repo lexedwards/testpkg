@@ -39,6 +39,7 @@ pipeline {
                 GITHUB_TOKEN=credentials('GITHUB_TOKEN')
             }
             steps {
+                sh "printenv"
                 sh "npm run release"
             }
         }
