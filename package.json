@@ -11,6 +11,8 @@
     "build": "parcel build",
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepublishOnly": "npm run build",
+    "lint:commit": "npx @lexedwards/release-cli@latest lint",
+    "release:help": "npx @lexedwards/release-cli@latest release help",
     "release": "npx @lexedwards/release-cli@latest release --github --npm"
   },
   "files": [

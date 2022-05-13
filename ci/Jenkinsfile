@@ -15,12 +15,17 @@ pipeline {
         }
         stage("Lint commit") {
             steps {
-                sh "npx @lexedwards/release-cli lint"
+                sh "npm run lint:commit"
             }
         }
         stage("npm install") {
             steps {
                 sh "npm ci"
+            }
+        }
+        stage("Publish help") {
+            steps {
+                sh "npm run release:help"
             }
         }
         stage('Publish') {
