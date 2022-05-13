@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.0.3](https://github.com/lexedwards/testpkg/compare/v2.1.1...v3.0.3) (2022-05-13)
+
+
+### Other Changes
+
+* debug script ([3995f52](https://github.com/lexedwards/testpkg/commit/3995f520e7d9a7c85b458a5e0aad26fabf019361))
+* major bump to check git tag issues ([64ae340](https://github.com/lexedwards/testpkg/commit/64ae340d532eb0507be7928e4e295af1e1ccea0d))
+
 ### [2.1.1](https://github.com/lexedwards/testpkg/compare/v2.1.0...v2.1.1) (2022-05-13)
 
 ## [2.1.0](https://github.com/lexedwards/testpkg/compare/v2.0.13...v2.1.0) (2022-05-13)
