@@ -13,7 +13,7 @@
     "prepublishOnly": "npm run build",
     "lint:commit": "npx @lexedwards/release-cli@latest lint",
     "release:help": "npx @lexedwards/release-cli@latest release --help",
-    "release": "DEBUG=true npx @lexedwards/release-cli@latest release --github --npm"
+    "release": "DEBUG=TRUE npx @lexedwards/release-cli@latest release --github --npm"
   },
   "files": [
     "./package.json",
