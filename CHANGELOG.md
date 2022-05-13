@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.1.0](https://github.com/lexedwards/testpkg/compare/v2.0.13...v2.1.0) (2022-05-13)
+
+
+### Features
+
+* test ([31c7cdc](https://github.com/lexedwards/testpkg/commit/31c7cdc8fc0d176b97f618a792206998a025a6fc))
+
+
+### Other Changes
+
+* ci script ([d34a534](https://github.com/lexedwards/testpkg/commit/d34a534c3c4f4c65ffb51515725bd9e15c9d8080))
+* oops ([d31f128](https://github.com/lexedwards/testpkg/commit/d31f128d7749e09152d02edae546da1d392179c3))
+
 ### [2.0.13](https://github.com/lexedwards/testpkg/compare/v2.0.12...v2.0.13) (2022-05-13)
 
 ### [2.0.12](https://github.com/lexedwards/testpkg/compare/v2.0.11...v2.0.12) (2022-05-13)
