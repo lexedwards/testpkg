@@ -25,6 +25,7 @@ pipeline {
         }
         stage("Publish help") {
             steps {
+                sh "git ls-remote --get-url"
                 sh "npm run release:help"
             }
         }
@@ -39,7 +40,6 @@ pipeline {
                 GITHUB_TOKEN=credentials('GITHUB_TOKEN')
             }
             steps {
-                sh "printenv"
                 sh "npm run release"
             }
         }
