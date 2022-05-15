@@ -22,7 +22,9 @@ pipeline {
         }
         stage('Publish') {
             when {
-                expression { env.GIT_TAG = null }
+                not {
+                    expression { env.GIT_TAG != null }
+                }
             }
             environment {
                 NPM_TOKEN=credentials('NPM_TOKEN')
