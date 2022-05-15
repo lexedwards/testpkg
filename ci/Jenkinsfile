@@ -2,21 +2,12 @@ pipeline {
     agent any
     stages {
         stage("Variables") {
+            environment {
+                GIT_COMMIT_MSG = sh(returnStdout: true, script: "git log -1 --pretty=%B").trim()
+                GIT_TAG = sh(returnStdout: true, script: "git tag --contains").trim()
+            }
             steps {
                 sh "printenv"
-                CURRENT_TAG = sh (script: "git name-rev --tags --name-only ${git rev-parse HEAD}", returnStdout: true).trim()
-            }
-        }
-        stage("Version Check") {
-            steps {
-                sh "node --version"
-                sh "npm --version"
-                sh "git --version"
-            }
-        }
-        stage("Lint commit") {
-            steps {
-                sh "npm run lint:commit"
             }
         }
         stage("npm install") {
@@ -24,17 +15,14 @@ pipeline {
                 sh "npm ci"
             }
         }
-        stage("Publish help") {
+        stage("Lint commit") {
             steps {
-                sh "git ls-remote --get-url"
-                sh "npm run release:help"
+                sh "npm run lint:commit"
             }
         }
         stage('Publish') {
             when {
-                not {
-                    CURRENT_TAG "v*"
-                }
+                expression { env.GIT_TAG = null }
             }
             environment {
                 NPM_TOKEN=credentials('NPM_TOKEN')
