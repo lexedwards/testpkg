@@ -1,15 +1,6 @@
 pipeline {
     agent any
     stages {
-        stage("Variables") {
-            environment {
-                GIT_COMMIT_MSG = sh(returnStdout: true, script: "git log -1 --pretty=%B").trim()
-                GIT_TAG = sh(returnStdout: true, script: "git tag --contains").trim()
-            }
-            steps {
-                sh "printenv"
-            }
-        }
         stage("npm install") {
             steps {
                 sh "npm ci"
@@ -21,16 +12,16 @@ pipeline {
             }
         }
         stage('Publish') {
-            when {
-                not {
-                    expression { env.GIT_TAG != null }
-                }
-            }
             environment {
                 NPM_TOKEN=credentials('NPM_TOKEN')
                 GITHUB_TOKEN=credentials('GITHUB_TOKEN')
+                GIT_TAG = sh(returnStdout: true, script: "git tag --contains").trim()
+            }
+            when {
+                expression { env.GIT_TAG == null }
             }
             steps {
+                sh "printenv"
                 withCredentials([gitUsernamePassword(credentialsId: 'github-credentials', gitToolName: 'Default')]) {
                     sh "npm run release"
                 }
